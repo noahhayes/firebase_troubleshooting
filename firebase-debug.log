@@ -1,0 +1,176 @@
+[debug] [2018-07-10T17:20:13.198Z] ----------------------------------------------------------------------
+[debug] [2018-07-10T17:20:13.204Z] Command:       /usr/local/Cellar/node/9.8.0/bin/node /usr/local/bin/firebase deploy --only functions --debug
+[debug] [2018-07-10T17:20:13.204Z] CLI Version:   3.19.3
+[debug] [2018-07-10T17:20:13.204Z] Platform:      darwin
+[debug] [2018-07-10T17:20:13.204Z] Node Version:  v9.8.0
+[debug] [2018-07-10T17:20:13.205Z] Time:          Tue Jul 10 2018 10:20:13 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:13.205Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-10T17:20:13.223Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-10T17:20:13.223Z] > authorizing via signed-in user
+[debug] [2018-07-10T17:20:13.226Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/context-app-5ff6c  
+  
+ Tue Jul 10 2018 10:20:13 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:13.803Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:13.805Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/context-app-5ff6c/tokens  
+  
+ Tue Jul 10 2018 10:20:13 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:14.188Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'context-app-5ff6c'...
+[info] 
+[info] i  deploying functions
+[debug] [2018-07-10T17:20:18.212Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "^5.11.0",
+    "firebase-functions": "^1.1.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-07-10T17:20:18.213Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/context-app-5ff6c?view=CONSUMER_VIEW  
+  
+ Tue Jul 10 2018 10:20:18 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:18.214Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/context-app-5ff6c?view=CONSUMER_VIEW  
+  
+ Tue Jul 10 2018 10:20:18 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:19.098Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:19.127Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-07-10T17:20:19.129Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/context-app-5ff6c  
+  
+ Tue Jul 10 2018 10:20:19 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:19.550Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:19.552Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/8497934429:getServerAppConfig  
+  
+ Tue Jul 10 2018 10:20:19 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:20.134Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-07-10T17:20:20.138Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/context-app-5ff6c/configs  
+  
+ Tue Jul 10 2018 10:20:20 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:20.374Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (52.22 KB) for uploading
+[debug] [2018-07-10T17:20:20.638Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/context-app-5ff6c/locations/us-central1/functions:generateUploadUrl  
+  
+ Tue Jul 10 2018 10:20:20 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:21.200Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:21.202Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-b4b9ab30-1712-4df6-9708-47859c50f6ac/37da0817-ba5a-4680-8fd6-be447979dc95.zip?GoogleAccessId=service-8497934429@gcf-admin-robot.iam.gserviceaccount.com&Expires=1531245008&Signature=c%2BAZMJ0esHfOMws7wlds6xzMaXMOJJzLNReU%2Bu1If5zxrzOGztbBfWEYAGgiUA2wtXNa0baNg06qzLMcZbYvU8KKizuXyMJldXEa36A2AsYKU2R0mpKwqe7bIJftbLxrwpq%2Fs7LL1GqGSAg24veMOxLqto2zoIadsfUsDrVjDTcIp84xabfH0YWwRUvnkB8B8cCMxdgEc5CTEnWY5zkxax%2BrJpSzCqnbtFUUkDzAxH3bhxseKXr3WSBzAINphN78tytUvFoJEDB%2FuJlDFRrGrcnuv6TxF5YxyZqFpS3sZtPH5GfvZq1bUiJfE87%2FwtA5lX9IAzGGvKRhLU6KY33Lcg%3D%3D  
+ ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 53472,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: '/var/folders/zn/f4bspj790r1bgb85pzx8kz1r0000gp/T/firebase-functions-9811DnEERd2N0zx1.zip',
+  fd: 19,
+  flags: 'r',
+  mode: 438,
+  start: 0,
+  end: Infinity,
+  autoClose: true,
+  pos: 131072,
+  bytesRead: 53472,
+  closed: false } 
+ Tue Jul 10 2018 10:20:21 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:21.681Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[debug] [2018-07-10T17:20:21.687Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/context-app-5ff6c/locations/us-central1/functions  
+  
+ Tue Jul 10 2018 10:20:21 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:22.179Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating function helloWorld...
+[debug] [2018-07-10T17:20:22.187Z] Trigger is:  {"eventTrigger":{"resource":"projects/_/instances/context-app-5ff6c/refs/hello","eventType":"providers/google.firebase.database/eventTypes/ref.create","service":"firebaseio.com"}}
+[info] i  functions: deleting function generateQuiz...
+[debug] [2018-07-10T17:20:22.191Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/context-app-5ff6c/locations/us-central1/functions/helloWorld 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl: 'https://storage.googleapis.com/gcf-upload-us-central1-b4b9ab30-1712-4df6-9708-47859c50f6ac/37da0817-ba5a-4680-8fd6-be447979dc95.zip?GoogleAccessId=service-8497934429@gcf-admin-robot.iam.gserviceaccount.com&Expires=1531245008&Signature=c%2BAZMJ0esHfOMws7wlds6xzMaXMOJJzLNReU%2Bu1If5zxrzOGztbBfWEYAGgiUA2wtXNa0baNg06qzLMcZbYvU8KKizuXyMJldXEa36A2AsYKU2R0mpKwqe7bIJftbLxrwpq%2Fs7LL1GqGSAg24veMOxLqto2zoIadsfUsDrVjDTcIp84xabfH0YWwRUvnkB8B8cCMxdgEc5CTEnWY5zkxax%2BrJpSzCqnbtFUUkDzAxH3bhxseKXr3WSBzAINphN78tytUvFoJEDB%2FuJlDFRrGrcnuv6TxF5YxyZqFpS3sZtPH5GfvZq1bUiJfE87%2FwtA5lX9IAzGGvKRhLU6KY33Lcg%3D%3D',
+  name: 'projects/context-app-5ff6c/locations/us-central1/functions/helloWorld',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger: 
+   { resource: 'projects/_/instances/context-app-5ff6c/refs/hello',
+     eventType: 'providers/google.firebase.database/eventTypes/ref.create',
+     service: 'firebaseio.com' } } 
+ Tue Jul 10 2018 10:20:22 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:22.195Z] >>> HTTP REQUEST DELETE https://cloudfunctions.googleapis.com/v1/projects/context-app-5ff6c/locations/us-central1/functions/generateQuiz  
+  
+ Tue Jul 10 2018 10:20:22 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:22.455Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:22.783Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:22.789Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:22 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:22.791Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvZ2VuZXJhdGVRdWl6L1VfVm92Q1FSc2w4  
+  
+ Tue Jul 10 2018 10:20:22 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:23.203Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions[generateQuiz]: Deployment error.
+[info] undefined
+[debug] [2018-07-10T17:20:23.236Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:25.241Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:25 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:25.439Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:27.445Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:27 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:27.859Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:29.864Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:29 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:30.287Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:32.291Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:32 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:32.714Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:34.719Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:34 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:35.160Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:37.163Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:37 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:37.532Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:39.533Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:39 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:39.968Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-10T17:20:41.972Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Y29udGV4dC1hcHAtNWZmNmMvdXMtY2VudHJhbDEvaGVsbG9Xb3JsZC9hM29raUVlZTJ6RQ  
+  
+ Tue Jul 10 2018 10:20:41 GMT-0700 (PDT)
+[debug] [2018-07-10T17:20:42.424Z] <<< HTTP RESPONSE 200
+[info] ✔  functions[helloWorld]: Successful update operation. 
+[info] 
+
+Functions deploy had errors. To continue deploying other features (such as database), run:
+[info]     firebase deploy --except functions
+[error] 
+[error] Error: Functions did not deploy properly.
